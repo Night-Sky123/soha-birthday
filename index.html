@@ -141,8 +141,7 @@ const LETTER = [
   "It’s honestly crazy how fast time flies. You’re 18 now, and I really hope this new chapter of your life brings you endless happiness, great memories, and everything you’ve been hoping for.",
   "I hope things work out for you, even the quiet goals and worries you don’t always talk about. I hope you get to chase all the things you’ve been dreaming of, and even when life gets overwhelming, remember you don’t have to go through it alone. You don’t have to have adulthood figured out right away; just take things at your own pace.",
   "Having you in my life is easily one of my favorite things, and I hope this year gives you a million reasons to smile. You deserve all the good things coming your way, Soha, and I’m really glad I get to be around to see you take on whatever comes next.",
-  "Happy birthday once again. I hope stepping into adulthood turns out to be something you’ll look back on with a big smile. 🫶❤️",
-  "— yours, always ♡"
+  "Happy birthday once again. I hope stepping into adulthood turns out to be something you’ll look back on with a big smile. 🫶❤️"
 ];
 const $=id=>document.getElementById(id), sleep=ms=>new Promise(r=>setTimeout(r,ms));
 $('nm').textContent=NAME; $('nm2').textContent=NAME;
@@ -240,7 +239,7 @@ async function writeLetter(){
  const spans=[];
  LETTER.forEach((p,i)=>{p.split(' ').forEach(w=>{const s=document.createElement('span');s.className='w';s.textContent=w+' ';box.appendChild(s);spans.push(s)});
   if(i<LETTER.length-1){const g=document.createElement('span');g.className='gap';box.appendChild(g)}});
- const sig=document.createElement('div');sig.className='sig';sig.innerHTML='<span class="w">— your friend, always ♡</span>';box.appendChild(sig);spans.push(sig.firstChild);fit();
+ const sig=document.createElement('div');sig.className='sig';sig.innerHTML='<span class="w">— yours, always ♡</span>';box.appendChild(sig);spans.push(sig.firstChild);fit();
  await sleep(1800);
  for(const s of spans){s.classList.add('v');scratch(s.textContent.trim().length);
   const w=s.textContent;await sleep(/[.,—]/.test(w.slice(-3))?520:210)}
